@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/cyppt/cuda/build",
+  "command": "/usr/bin/g++-8  -I/home/cyppt/cuda/ch4/include -I/usr/local/cuda-11.0/include -g -o CMakeFiles/example1.dir/example1.cpp.o -c /home/cyppt/cuda/ch4/example1.cpp",
+  "file": "/home/cyppt/cuda/ch4/example1.cpp",
+  "output": "CMakeFiles/example1.dir/example1.cpp.o"
+},
+{
+  "directory": "/home/cyppt/cuda/build",
+  "command": "/usr/bin/g++-8  -I/home/cyppt/cuda/ch4/include -I/usr/local/cuda-11.0/include -g -o CMakeFiles/example2.dir/example2.cpp.o -c /home/cyppt/cuda/ch4/example2.cpp",
+  "file": "/home/cyppt/cuda/ch4/example2.cpp",
+  "output": "CMakeFiles/example2.dir/example2.cpp.o"
+}
+]
