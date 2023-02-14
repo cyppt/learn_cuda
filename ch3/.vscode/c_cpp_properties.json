@@ -5,7 +5,6 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/usr/local/cuda-11.0/**",
-                "/usr/local/cuda-11.0/include",
                 "/usr/local/cuda-11.0/targets/x86_64-linux/include"
             ],
             "defines": [],
@@ -13,7 +12,6 @@
             "cStandard": "c17",
             "cppStandard": "c++14",
             "intelliSenseMode": "linux-clang-x64",
-            "compileCommands": "${workspaceFolder}/ch3/build/compile_commands.json",
             "configurationProvider": "ms-vscode.cmake-tools"
         }
     ],

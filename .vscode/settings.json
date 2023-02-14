@@ -66,5 +66,5 @@
         "string_view": "cpp",
         "__nullptr": "cpp"
     },
-    "cmake.sourceDirectory": "${workspaceFolder}/ch4"
+    "cmake.sourceDirectory": "${workspaceFolder}"
 }

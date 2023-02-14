@@ -1,0 +1,1 @@
+/usr/bin/g++-8 -g -rdynamic CMakeFiles/example1_ch5.dir/example1_ch5.cpp.o CMakeFiles/example1_ch5.dir/example1_ch5_generated_add1.cu.o -o example1_ch5  /usr/local/cuda-11.0/lib64/libcudart_static.a -ldl -lrt -lpthread 

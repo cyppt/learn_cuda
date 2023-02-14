@@ -1,1 +1,0 @@
-/usr/bin/g++-8 -g -rdynamic CMakeFiles/helloworld.dir/helloworld.cpp.o CMakeFiles/helloworld.dir/helloworld_generated_addition.cu.o -o helloworld  /usr/local/cuda/lib64/libcudart_static.a -ldl -lrt -lpthread 

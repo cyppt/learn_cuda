@@ -1,3 +1,0 @@
-/home/cyppt/cuda/try/build/CMakeFiles/helloworld.dir
-/home/cyppt/cuda/try/build/CMakeFiles/edit_cache.dir
-/home/cyppt/cuda/try/build/CMakeFiles/rebuild_cache.dir
