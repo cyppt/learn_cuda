@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,7 +31,8 @@
 					"name" : "ch5_cuda",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -39,8 +41,15 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "example1_ch5::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-example1_ch5-Debug-31bc73ac324487341d16.json",
+					"jsonFile" : "target-example1_ch5-Debug-322f39d237b09c028276.json",
 					"name" : "example1_ch5",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "example2_ch5::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-example2_ch5-Debug-3416fee71e5fbbebcc4f.json",
+					"name" : "example2_ch5",
 					"projectIndex" : 0
 				}
 			]

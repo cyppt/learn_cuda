@@ -13,6 +13,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.26.0-rc1/CMakeSystem.cmake"
   "CMakeFiles/example1_ch5.dir/example1_ch5_generated_add1.cu.o.cmake.pre-gen"
   "CMakeFiles/example1_ch5.dir/example1_ch5_generated_add1.cu.o.depend"
+  "CMakeFiles/example2_ch5.dir/example2_ch5_generated_anim_bitmap.cu.o.cmake.pre-gen"
+  "CMakeFiles/example2_ch5.dir/example2_ch5_generated_anim_bitmap.cu.o.depend"
   "/usr/local/share/cmake-3.26/Modules/CMakeCInformation.cmake"
   "/usr/local/share/cmake-3.26/Modules/CMakeCXXInformation.cmake"
   "/usr/local/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake"
@@ -31,8 +33,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/share/cmake-3.26/Modules/FindCUDA.cmake"
   "/usr/local/share/cmake-3.26/Modules/FindCUDA/run_nvcc.cmake"
   "/usr/local/share/cmake-3.26/Modules/FindCUDA/select_compute_arch.cmake"
+  "/usr/local/share/cmake-3.26/Modules/FindGLUT.cmake"
+  "/usr/local/share/cmake-3.26/Modules/FindOpenGL.cmake"
   "/usr/local/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/local/share/cmake-3.26/Modules/FindPackageMessage.cmake"
+  "/usr/local/share/cmake-3.26/Modules/FindPkgConfig.cmake"
   "/usr/local/share/cmake-3.26/Modules/FindThreads.cmake"
   "/usr/local/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake"
   "/usr/local/share/cmake-3.26/Modules/Platform/Linux-GNU-C.cmake"
@@ -40,6 +45,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/share/cmake-3.26/Modules/Platform/Linux-GNU.cmake"
   "/usr/local/share/cmake-3.26/Modules/Platform/Linux.cmake"
   "/usr/local/share/cmake-3.26/Modules/Platform/UnixPaths.cmake"
+  "/usr/local/share/cmake-3.26/Modules/SelectLibraryConfigurations.cmake"
   )
 
 # The corresponding makefile is:
@@ -51,11 +57,14 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/example1_ch5.dir/example1_ch5_generated_add1.cu.o.cmake.pre-gen"
+  "CMakeFiles/example2_ch5.dir/example2_ch5_generated_anim_bitmap.cu.o.cmake.pre-gen"
   "CMakeFiles/example1_ch5.dir/example1_ch5_generated_add1.cu.o.Debug.cmake"
+  "CMakeFiles/example2_ch5.dir/example2_ch5_generated_anim_bitmap.cu.o.Debug.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/example1_ch5.dir/DependInfo.cmake"
+  "CMakeFiles/example2_ch5.dir/DependInfo.cmake"
   )

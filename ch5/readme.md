@@ -33,3 +33,13 @@ __global__ void add(int *a, int *b, int *c)
 }
 ```
 > 完整程序见示例1
+
+### 示例2知识点
+> 使用OpenGL 得同时加入 opengl和glut库
+> 注意核函数中，thredIdx blockIdx blockDim gridDim的区别
+> 注意图像位置xy 和 偏移offset的计算
+> 注意xlauch（WSL显示器）需要取消勾选Disable access control，否则会报，其他为默认选项。
+'''
+Authorization required, but no authorization protocol specified
+Error: Can't open display
+'''

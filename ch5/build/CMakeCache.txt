@@ -353,6 +353,51 @@ CUDA_nvToolsExt_LIBRARY:FILEPATH=/usr/local/cuda-11.0/lib64/libnvToolsExt.so
 //Path to a library.
 CUDA_rt_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
 
+//Path to a file.
+GLUT_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+GLUT_Xi_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libXi.so
+
+//Path to a library.
+GLUT_Xmu_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libXmu.so
+
+//Path to a library.
+GLUT_glut_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libglut.so
+
+//Path to a file.
+OPENGL_EGL_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a file.
+OPENGL_GLX_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a file.
+OPENGL_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+OPENGL_egl_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libEGL.so
+
+//Path to a library.
+OPENGL_gl_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libGL.so
+
+//Path to a library.
+OPENGL_glu_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libGLU.so
+
+//Path to a library.
+OPENGL_glx_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libGLX.so
+
+//Path to a library.
+OPENGL_opengl_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libOpenGL.so
+
+//Path to a file.
+OPENGL_xmesa_INCLUDE_DIR:PATH=OPENGL_xmesa_INCLUDE_DIR-NOTFOUND
+
+//Arguments to supply to pkg-config
+PKG_CONFIG_ARGN:STRING=
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
+
 //Value Computed by CMake
 ch5_cuda_BINARY_DIR:STATIC=/home/cyppt/cuda/ch5/build
 
@@ -520,7 +565,7 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 CUDA_64_BIT_DEVICE_CODE-ADVANCED:INTERNAL=1
 //List of intermediate files that are part of the cuda dependency
 // scanning.
-CUDA_ADDITIONAL_CLEAN_FILES:INTERNAL=/home/cyppt/cuda/ch5/build/CMakeFiles/example1_ch5.dir//example1_ch5_generated_add1.cu.o.depend
+CUDA_ADDITIONAL_CLEAN_FILES:INTERNAL=/home/cyppt/cuda/ch5/build/CMakeFiles/example1_ch5.dir//example1_ch5_generated_add1.cu.o.depend;/home/cyppt/cuda/ch5/build/CMakeFiles/example2_ch5.dir//example2_ch5_generated_anim_bitmap.cu.o.depend
 //ADVANCED property for variable: CUDA_ATTACH_VS_BUILD_RULE_TO_CUDA_FILE
 CUDA_ATTACH_VS_BUILD_RULE_TO_CUDA_FILE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_BUILD_CUBIN
@@ -616,8 +661,72 @@ CUDA_parse_cubin:INTERNAL=/usr/local/share/cmake-3.26/Modules/FindCUDA/parse_cub
 CUDA_run_nvcc:INTERNAL=/usr/local/share/cmake-3.26/Modules/FindCUDA/run_nvcc.cmake
 //Details about finding CUDA
 FIND_PACKAGE_MESSAGE_DETAILS_CUDA:INTERNAL=[/usr/local/cuda-11.0][/usr/local/cuda-11.0/bin/nvcc][/usr/local/cuda-11.0/include][/usr/local/cuda-11.0/lib64/libcudart_static.a][v11.0()]
+//Details about finding GLUT
+FIND_PACKAGE_MESSAGE_DETAILS_GLUT:INTERNAL=[/usr/lib/x86_64-linux-gnu/libglut.so][/usr/include][v()]
+//Details about finding OpenGL
+FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libOpenGL.so][/usr/lib/x86_64-linux-gnu/libGLX.so][/usr/include][c ][v()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//ADVANCED property for variable: GLUT_INCLUDE_DIR
+GLUT_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GLUT_Xi_LIBRARY
+GLUT_Xi_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GLUT_Xmu_LIBRARY
+GLUT_Xmu_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GLUT_glut_LIBRARY
+GLUT_glut_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGL_EGL_INCLUDE_DIR
+OPENGL_EGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGL_GLX_INCLUDE_DIR
+OPENGL_GLX_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGL_INCLUDE_DIR
+OPENGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGL_egl_LIBRARY
+OPENGL_egl_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGL_gl_LIBRARY
+OPENGL_gl_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGL_glu_LIBRARY
+OPENGL_glu_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGL_glx_LIBRARY
+OPENGL_glx_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGL_opengl_LIBRARY
+OPENGL_opengl_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGL_xmesa_INCLUDE_DIR
+OPENGL_xmesa_INCLUDE_DIR-ADVANCED:INTERNAL=1
+PC_GLUT_CFLAGS:INTERNAL=
+PC_GLUT_CFLAGS_I:INTERNAL=
+PC_GLUT_CFLAGS_OTHER:INTERNAL=
+PC_GLUT_FOUND:INTERNAL=
+PC_GLUT_INCLUDEDIR:INTERNAL=
+PC_GLUT_LIBDIR:INTERNAL=
+PC_GLUT_LIBS:INTERNAL=
+PC_GLUT_LIBS_L:INTERNAL=
+PC_GLUT_LIBS_OTHER:INTERNAL=
+PC_GLUT_LIBS_PATHS:INTERNAL=
+PC_GLUT_MODULE_NAME:INTERNAL=
+PC_GLUT_PREFIX:INTERNAL=
+PC_GLUT_STATIC_CFLAGS:INTERNAL=
+PC_GLUT_STATIC_CFLAGS_I:INTERNAL=
+PC_GLUT_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_GLUT_STATIC_LIBDIR:INTERNAL=
+PC_GLUT_STATIC_LIBS:INTERNAL=
+PC_GLUT_STATIC_LIBS_L:INTERNAL=
+PC_GLUT_STATIC_LIBS_OTHER:INTERNAL=
+PC_GLUT_STATIC_LIBS_PATHS:INTERNAL=
+PC_GLUT_VERSION:INTERNAL=
+PC_GLUT_freeglut_INCLUDEDIR:INTERNAL=
+PC_GLUT_freeglut_LIBDIR:INTERNAL=
+PC_GLUT_freeglut_PREFIX:INTERNAL=
+PC_GLUT_freeglut_VERSION:INTERNAL=
+PC_GLUT_glut_INCLUDEDIR:INTERNAL=
+PC_GLUT_glut_LIBDIR:INTERNAL=
+PC_GLUT_glut_PREFIX:INTERNAL=
+PC_GLUT_glut_VERSION:INTERNAL=
+//ADVANCED property for variable: PKG_CONFIG_ARGN
+PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
+__pkg_config_checked_PC_GLUT:INTERNAL=1
 

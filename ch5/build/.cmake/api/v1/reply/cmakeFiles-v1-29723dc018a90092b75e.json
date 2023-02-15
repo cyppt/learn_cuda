@@ -177,6 +177,56 @@
 			"path" : "/usr/local/share/cmake-3.26/Modules/FindCUDA/select_compute_arch.cmake"
 		},
 		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/local/share/cmake-3.26/Modules/FindOpenGL.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/local/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/local/share/cmake-3.26/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/local/share/cmake-3.26/Modules/FindGLUT.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/local/share/cmake-3.26/Modules/SelectLibraryConfigurations.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/local/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/local/share/cmake-3.26/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/local/share/cmake-3.26/Modules/FindPkgConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/local/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/local/share/cmake-3.26/Modules/FindPackageMessage.cmake"
+		},
+		{
 			"isGenerated" : true,
 			"path" : "build/CMakeFiles/example1_ch5.dir/example1_ch5_generated_add1.cu.o.depend"
 		},
@@ -187,7 +237,20 @@
 		},
 		{
 			"isGenerated" : true,
+			"path" : "build/CMakeFiles/example2_ch5.dir/example2_ch5_generated_anim_bitmap.cu.o.depend"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/local/share/cmake-3.26/Modules/FindCUDA/run_nvcc.cmake"
+		},
+		{
+			"isGenerated" : true,
 			"path" : "build/CMakeFiles/example1_ch5.dir/example1_ch5_generated_add1.cu.o.cmake.pre-gen"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/example2_ch5.dir/example2_ch5_generated_anim_bitmap.cu.o.cmake.pre-gen"
 		}
 	],
 	"kind" : "cmakeFiles",

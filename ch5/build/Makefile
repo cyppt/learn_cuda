@@ -129,6 +129,19 @@ example1_ch5/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example1_ch5.dir/build.make CMakeFiles/example1_ch5.dir/build
 .PHONY : example1_ch5/fast
 
+#=============================================================================
+# Target rules for targets named example2_ch5
+
+# Build rule for target.
+example2_ch5: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example2_ch5
+.PHONY : example2_ch5
+
+# fast build rule for target.
+example2_ch5/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example2_ch5.dir/build.make CMakeFiles/example2_ch5.dir/build
+.PHONY : example2_ch5/fast
+
 example1_ch5.o: example1_ch5.cpp.o
 .PHONY : example1_ch5.o
 
@@ -153,6 +166,30 @@ example1_ch5.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example1_ch5.dir/build.make CMakeFiles/example1_ch5.dir/example1_ch5.cpp.s
 .PHONY : example1_ch5.cpp.s
 
+example2_ch5.o: example2_ch5.cpp.o
+.PHONY : example2_ch5.o
+
+# target to build an object file
+example2_ch5.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example2_ch5.dir/build.make CMakeFiles/example2_ch5.dir/example2_ch5.cpp.o
+.PHONY : example2_ch5.cpp.o
+
+example2_ch5.i: example2_ch5.cpp.i
+.PHONY : example2_ch5.i
+
+# target to preprocess a source file
+example2_ch5.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example2_ch5.dir/build.make CMakeFiles/example2_ch5.dir/example2_ch5.cpp.i
+.PHONY : example2_ch5.cpp.i
+
+example2_ch5.s: example2_ch5.cpp.s
+.PHONY : example2_ch5.s
+
+# target to generate assembly for a file
+example2_ch5.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example2_ch5.dir/build.make CMakeFiles/example2_ch5.dir/example2_ch5.cpp.s
+.PHONY : example2_ch5.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +199,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... example1_ch5"
+	@echo "... example2_ch5"
 	@echo "... example1_ch5.o"
 	@echo "... example1_ch5.i"
 	@echo "... example1_ch5.s"
+	@echo "... example2_ch5.o"
+	@echo "... example2_ch5.i"
+	@echo "... example2_ch5.s"
 .PHONY : help
 
 

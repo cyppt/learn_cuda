@@ -58,18 +58,18 @@ endif()
 
 # Set these up as variables to make reading the generated file easier
 set(CMAKE_COMMAND "/usr/local/bin/cmake") # path
-set(source_file "/home/cyppt/cuda/ch5/add1.cu") # path
-set(NVCC_generated_dependency_file "/home/cyppt/cuda/ch5/build/CMakeFiles/example1_ch5.dir//example1_ch5_generated_add1.cu.o.NVCC-depend") # path
-set(cmake_dependency_file "/home/cyppt/cuda/ch5/build/CMakeFiles/example1_ch5.dir//example1_ch5_generated_add1.cu.o.depend") # path
+set(source_file "/home/cyppt/cuda/ch5/anim_bitmap.cu") # path
+set(NVCC_generated_dependency_file "/home/cyppt/cuda/ch5/build/CMakeFiles/example2_ch5.dir//example2_ch5_generated_anim_bitmap.cu.o.NVCC-depend") # path
+set(cmake_dependency_file "/home/cyppt/cuda/ch5/build/CMakeFiles/example2_ch5.dir//example2_ch5_generated_anim_bitmap.cu.o.depend") # path
 set(CUDA_make2cmake "/usr/local/share/cmake-3.26/Modules/FindCUDA/make2cmake.cmake") # path
 set(CUDA_parse_cubin "/usr/local/share/cmake-3.26/Modules/FindCUDA/parse_cubin.cmake") # path
 set(build_cubin OFF) # bool
 set(CUDA_HOST_COMPILER "/usr/bin/gcc-8") # path
 # We won't actually use these variables for now, but we need to set this, in
 # order to force this file to be run again if it changes.
-set(generated_file_path "/home/cyppt/cuda/ch5/build/CMakeFiles/example1_ch5.dir//.") # path
-set(generated_file_internal "/home/cyppt/cuda/ch5/build/CMakeFiles/example1_ch5.dir//./example1_ch5_generated_add1.cu.o") # path
-set(generated_cubin_file_internal "/home/cyppt/cuda/ch5/build/CMakeFiles/example1_ch5.dir//./example1_ch5_generated_add1.cu.o.cubin.txt") # path
+set(generated_file_path "/home/cyppt/cuda/ch5/build/CMakeFiles/example2_ch5.dir//.") # path
+set(generated_file_internal "/home/cyppt/cuda/ch5/build/CMakeFiles/example2_ch5.dir//./example2_ch5_generated_anim_bitmap.cu.o") # path
+set(generated_cubin_file_internal "/home/cyppt/cuda/ch5/build/CMakeFiles/example2_ch5.dir//./example2_ch5_generated_anim_bitmap.cu.o.cubin.txt") # path
 
 set(CUDA_NVCC_EXECUTABLE "/usr/local/cuda-11.0/bin/nvcc") # path
 set(CUDA_NVCC_FLAGS  ;; ) # list
