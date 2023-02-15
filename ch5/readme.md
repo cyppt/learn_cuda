@@ -38,8 +38,16 @@ __global__ void add(int *a, int *b, int *c)
 > 使用OpenGL 得同时加入 opengl和glut库
 > 注意核函数中，thredIdx blockIdx blockDim gridDim的区别
 > 注意图像位置xy 和 偏移offset的计算
-> 注意xlauch（WSL显示器）需要取消勾选Disable access control，否则会报，其他为默认选项。
-'''
+> 注意xlauch（WSL显示器）需要取消勾选Disable access control，否则会报，其他为默认选项。    
+```
 Authorization required, but no authorization protocol specified
 Error: Can't open display
-'''
+```
+
+### 示例3知识点
+* 共享内存和同步    
+> ```__share__``` 关键字创建的变量，对于每一个block，均创建一个其的副本，每一个block下的thred共享这块内存，但thred不能修改和看见其它block的该共享变量。----所以可以实现多个线程通信，不过要注意先后顺序，类似cpu 锁，即线程之间的同步问题
+> ```__syncthreads()``` , 确保线程块中的每个线程都执行完了，才会执行之后的语句。
+* 归约运算(Reduction)
+> 概念：对输入的数组进行某种处理，得到某种更小的数组
+

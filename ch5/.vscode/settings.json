@@ -1,7 +1,10 @@
 {
     "files.associations": {
         "*.cu": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "random": "cpp",
+        "algorithm": "cpp",
+        "__locale": "cpp"
     },
     "C_Cpp.intelliSenseEngineFallback": "enabled"
 }

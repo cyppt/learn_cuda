@@ -1195,7 +1195,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/cyppt/cuda/ch5/build/CMakeFiles/example1_ch5.dir//example1_ch5_generated_add1.cu.o.depend;/home/cyppt/cuda/ch5/build/CMakeFiles/example2_ch5.dir//example2_ch5_generated_anim_bitmap.cu.o.depend"
+			"value" : "/home/cyppt/cuda/ch5/build/CMakeFiles/example1_ch5.dir//example1_ch5_generated_add1.cu.o.depend;/home/cyppt/cuda/ch5/build/CMakeFiles/example2_ch5.dir//example2_ch5_generated_anim_bitmap.cu.o.depend;/home/cyppt/cuda/ch5/build/CMakeFiles/example3_ch5.dir//example3_ch5_generated_dot_ch5.cu.o.depend"
 		},
 		{
 			"name" : "CUDA_ATTACH_VS_BUILD_RULE_TO_CUDA_FILE",

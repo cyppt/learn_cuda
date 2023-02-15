@@ -565,7 +565,7 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 CUDA_64_BIT_DEVICE_CODE-ADVANCED:INTERNAL=1
 //List of intermediate files that are part of the cuda dependency
 // scanning.
-CUDA_ADDITIONAL_CLEAN_FILES:INTERNAL=/home/cyppt/cuda/ch5/build/CMakeFiles/example1_ch5.dir//example1_ch5_generated_add1.cu.o.depend;/home/cyppt/cuda/ch5/build/CMakeFiles/example2_ch5.dir//example2_ch5_generated_anim_bitmap.cu.o.depend
+CUDA_ADDITIONAL_CLEAN_FILES:INTERNAL=/home/cyppt/cuda/ch5/build/CMakeFiles/example1_ch5.dir//example1_ch5_generated_add1.cu.o.depend;/home/cyppt/cuda/ch5/build/CMakeFiles/example2_ch5.dir//example2_ch5_generated_anim_bitmap.cu.o.depend;/home/cyppt/cuda/ch5/build/CMakeFiles/example3_ch5.dir//example3_ch5_generated_dot_ch5.cu.o.depend
 //ADVANCED property for variable: CUDA_ATTACH_VS_BUILD_RULE_TO_CUDA_FILE
 CUDA_ATTACH_VS_BUILD_RULE_TO_CUDA_FILE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_BUILD_CUBIN
