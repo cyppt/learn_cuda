@@ -19,4 +19,6 @@ include_directories(${PROJECT_SOURCE_DIR}/include) # 通过源码根目录来定
 cuda_add_executable (example1_ch5 example1_ch5.cpp add1.cu)
 cuda_add_executable (example2_ch5 example2_ch5.cpp anim_bitmap.cu)
 cuda_add_executable (example3_ch5 example3_ch5.cpp dot_ch5.cu)
+cuda_add_executable (example4_ch5 example4_ch5.cpp julia_ch5.cu)
 target_link_libraries(example2_ch5 ${OPENGL_LIBRARIES} ${GLUT_LIBRARIES})
+target_link_libraries(example4_ch5 ${OPENGL_LIBRARIES} ${GLUT_LIBRARIES})
