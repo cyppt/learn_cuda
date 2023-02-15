@@ -17,6 +17,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/example2_ch5.dir/example2_ch5_generated_anim_bitmap.cu.o.depend"
   "CMakeFiles/example3_ch5.dir/example3_ch5_generated_dot_ch5.cu.o.cmake.pre-gen"
   "CMakeFiles/example3_ch5.dir/example3_ch5_generated_dot_ch5.cu.o.depend"
+  "CMakeFiles/example4_ch5.dir/example4_ch5_generated_julia_ch5.cu.o.cmake.pre-gen"
+  "CMakeFiles/example4_ch5.dir/example4_ch5_generated_julia_ch5.cu.o.depend"
   "/usr/local/share/cmake-3.26/Modules/CMakeCInformation.cmake"
   "/usr/local/share/cmake-3.26/Modules/CMakeCXXInformation.cmake"
   "/usr/local/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake"
@@ -61,9 +63,11 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/example1_ch5.dir/example1_ch5_generated_add1.cu.o.cmake.pre-gen"
   "CMakeFiles/example2_ch5.dir/example2_ch5_generated_anim_bitmap.cu.o.cmake.pre-gen"
   "CMakeFiles/example3_ch5.dir/example3_ch5_generated_dot_ch5.cu.o.cmake.pre-gen"
+  "CMakeFiles/example4_ch5.dir/example4_ch5_generated_julia_ch5.cu.o.cmake.pre-gen"
   "CMakeFiles/example1_ch5.dir/example1_ch5_generated_add1.cu.o.Debug.cmake"
   "CMakeFiles/example2_ch5.dir/example2_ch5_generated_anim_bitmap.cu.o.Debug.cmake"
   "CMakeFiles/example3_ch5.dir/example3_ch5_generated_dot_ch5.cu.o.Debug.cmake"
+  "CMakeFiles/example4_ch5.dir/example4_ch5_generated_julia_ch5.cu.o.Debug.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -72,4 +76,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/example1_ch5.dir/DependInfo.cmake"
   "CMakeFiles/example2_ch5.dir/DependInfo.cmake"
   "CMakeFiles/example3_ch5.dir/DependInfo.cmake"
+  "CMakeFiles/example4_ch5.dir/DependInfo.cmake"
   )

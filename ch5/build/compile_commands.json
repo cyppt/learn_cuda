@@ -16,5 +16,11 @@
   "command": "/usr/bin/g++-8  -I/home/cyppt/cuda/ch5/include -I/usr/local/cuda-11.0/include -g -o CMakeFiles/example3_ch5.dir/example3_ch5.cpp.o -c /home/cyppt/cuda/ch5/example3_ch5.cpp",
   "file": "/home/cyppt/cuda/ch5/example3_ch5.cpp",
   "output": "CMakeFiles/example3_ch5.dir/example3_ch5.cpp.o"
+},
+{
+  "directory": "/home/cyppt/cuda/ch5/build",
+  "command": "/usr/bin/g++-8  -I/home/cyppt/cuda/ch5/include -I/usr/local/cuda-11.0/include -g -o CMakeFiles/example4_ch5.dir/example4_ch5.cpp.o -c /home/cyppt/cuda/ch5/example4_ch5.cpp",
+  "file": "/home/cyppt/cuda/ch5/example4_ch5.cpp",
+  "output": "CMakeFiles/example4_ch5.dir/example4_ch5.cpp.o"
 }
 ]

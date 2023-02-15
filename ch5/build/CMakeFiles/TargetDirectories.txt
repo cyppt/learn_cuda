@@ -1,5 +1,6 @@
 /home/cyppt/cuda/ch5/build/CMakeFiles/example1_ch5.dir
 /home/cyppt/cuda/ch5/build/CMakeFiles/example2_ch5.dir
 /home/cyppt/cuda/ch5/build/CMakeFiles/example3_ch5.dir
+/home/cyppt/cuda/ch5/build/CMakeFiles/example4_ch5.dir
 /home/cyppt/cuda/ch5/build/CMakeFiles/edit_cache.dir
 /home/cyppt/cuda/ch5/build/CMakeFiles/rebuild_cache.dir

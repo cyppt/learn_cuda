@@ -2,3 +2,4 @@
 65fb166aabd7f8ca6dcccb477cafe2d7 CMakeFiles/example1_ch5.dir/example1_ch5_generated_add1.cu.o
 fa42bc7b4cf93137224c78e2c027c0d0 CMakeFiles/example2_ch5.dir/example2_ch5_generated_anim_bitmap.cu.o
 6336a19c71f51965a0145c3870b736e4 CMakeFiles/example3_ch5.dir/example3_ch5_generated_dot_ch5.cu.o
+c29bb3a3161b0ef0f09238d5418fc75e CMakeFiles/example4_ch5.dir/example4_ch5_generated_julia_ch5.cu.o

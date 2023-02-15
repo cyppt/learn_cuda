@@ -66,6 +66,7 @@ CMAKE_BINARY_DIR = /home/cyppt/cuda/ch5/build
 all: CMakeFiles/example1_ch5.dir/all
 all: CMakeFiles/example2_ch5.dir/all
 all: CMakeFiles/example3_ch5.dir/all
+all: CMakeFiles/example4_ch5.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -76,6 +77,7 @@ preinstall:
 clean: CMakeFiles/example1_ch5.dir/clean
 clean: CMakeFiles/example2_ch5.dir/clean
 clean: CMakeFiles/example3_ch5.dir/clean
+clean: CMakeFiles/example4_ch5.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -155,6 +157,32 @@ example3_ch5: CMakeFiles/example3_ch5.dir/rule
 CMakeFiles/example3_ch5.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example3_ch5.dir/build.make CMakeFiles/example3_ch5.dir/clean
 .PHONY : CMakeFiles/example3_ch5.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/example4_ch5.dir
+
+# All Build rule for target.
+CMakeFiles/example4_ch5.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example4_ch5.dir/build.make CMakeFiles/example4_ch5.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example4_ch5.dir/build.make CMakeFiles/example4_ch5.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cyppt/cuda/ch5/build/CMakeFiles --progress-num=10,11,12 "Built target example4_ch5"
+.PHONY : CMakeFiles/example4_ch5.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/example4_ch5.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cyppt/cuda/ch5/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/example4_ch5.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cyppt/cuda/ch5/build/CMakeFiles 0
+.PHONY : CMakeFiles/example4_ch5.dir/rule
+
+# Convenience name for target.
+example4_ch5: CMakeFiles/example4_ch5.dir/rule
+.PHONY : example4_ch5
+
+# clean rule for target.
+CMakeFiles/example4_ch5.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example4_ch5.dir/build.make CMakeFiles/example4_ch5.dir/clean
+.PHONY : CMakeFiles/example4_ch5.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

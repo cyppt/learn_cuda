@@ -17,7 +17,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -34,7 +35,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -59,6 +61,13 @@
 					"id" : "example3_ch5::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-example3_ch5-Debug-9035b6634688ab186f49.json",
 					"name" : "example3_ch5",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "example4_ch5::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-example4_ch5-Debug-473f65596272ec80a575.json",
+					"name" : "example4_ch5",
 					"projectIndex" : 0
 				}
 			]

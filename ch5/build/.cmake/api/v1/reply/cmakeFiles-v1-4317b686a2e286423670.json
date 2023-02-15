@@ -255,6 +255,15 @@
 		},
 		{
 			"isGenerated" : true,
+			"path" : "build/CMakeFiles/example4_ch5.dir/example4_ch5_generated_julia_ch5.cu.o.depend"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/local/share/cmake-3.26/Modules/FindCUDA/run_nvcc.cmake"
+		},
+		{
+			"isGenerated" : true,
 			"path" : "build/CMakeFiles/example1_ch5.dir/example1_ch5_generated_add1.cu.o.cmake.pre-gen"
 		},
 		{
@@ -264,6 +273,10 @@
 		{
 			"isGenerated" : true,
 			"path" : "build/CMakeFiles/example3_ch5.dir/example3_ch5_generated_dot_ch5.cu.o.cmake.pre-gen"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/example4_ch5.dir/example4_ch5_generated_julia_ch5.cu.o.cmake.pre-gen"
 		}
 	],
 	"kind" : "cmakeFiles",
