@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "*.cu": "cpp",
+        "cmath": "cpp",
+        "core": "cpp",
+        "algorithm": "cpp",
+        "complex": "cpp",
+        "new": "cpp",
+        "atomic": "cpp",
+        "climits": "cpp",
+        "__atomic": "cpp",
+        "__atomic_derived": "cpp",
+        "__atomic_generated": "cpp",
+        "ios": "cpp",
+        "iostream": "cpp",
+        "iomanip": "cpp"
+    }
+}
