@@ -13,14 +13,18 @@ struct DataBlock
     float frames;
 };
 
+float * dev_temp; // 用于swap函数
+
 // 书上没有给出的函数
-template<typename T>
-void swap(T a, T b)
+void swap(float* dev_a, float * dev_b, long size)
 {
-    T temp;
-    temp = b;
-    b = a;
-    a = temp;
+    //float * dev_temp;  //写成全局变量 不用每次分配内存
+    //cudaMalloc((void **)&dev_temp, size);
+    
+    cudaMemcpy(dev_temp, dev_a, size, cudaMemcpyDeviceToDevice);
+    cudaMemcpy(dev_a, dev_b, size, cudaMemcpyDeviceToDevice);
+    cudaMemcpy(dev_b, dev_temp, size, cudaMemcpyDeviceToDevice);
+    //cudaFree(dev_temp);
 }
 
 __global__ void copy_const_kernel(float *input_ptr, const float *const_refer_ptr)
@@ -111,7 +115,7 @@ void anim_gpu(DataBlock *d)
         copy_const_kernel<<<blocks, threads>>>(d->dev_inSrc, d->dev_constSrc);
         blend_kernel<<<blocks, threads>>>(d->dev_outSrc, d->dev_inSrc);
 
-        swap(d->dev_inSrc, d->dev_outSrc);
+        swap(d->dev_inSrc, d->dev_outSrc, d->bitmap->image_size());
     }
     float_to_color<<<blocks, threads>>>(d->output_bitmap, d->dev_inSrc);
     cudaEventRecord(d->stop, 0);
@@ -122,7 +126,7 @@ void anim_gpu(DataBlock *d)
     d->totalTime += elapsedTime;
     ++d->frames;
     printf("Average Time per frame : %3.1f ms \n", d->totalTime/d->frames);
-    std::cin.get();
+    //std::cin.get(); // check
 }
 
 void anim_exit(DataBlock *d)
@@ -130,6 +134,7 @@ void anim_exit(DataBlock *d)
     cudaFree(d->dev_constSrc);
     cudaFree(d->dev_inSrc);
     cudaFree(d->dev_outSrc);
+    cudaFree(dev_temp); // swap 交换变量
 
     cudaEventDestroy(d->start);
     cudaEventDestroy(d->stop);
@@ -149,6 +154,7 @@ extern "C" void HeatKernel()
     cudaMalloc((void**)&data.dev_constSrc, bitmap.image_size());
     cudaMalloc((void**)&data.dev_inSrc, bitmap.image_size());
     cudaMalloc((void**)&data.dev_outSrc, bitmap.image_size());
+    cudaMalloc((void **)&dev_temp, bitmap.image_size()); // 用于swap函数交换
 
     float *temp = (float*)malloc(bitmap.image_size());
     for(int i = 0; i < DIM*DIM; i++)
