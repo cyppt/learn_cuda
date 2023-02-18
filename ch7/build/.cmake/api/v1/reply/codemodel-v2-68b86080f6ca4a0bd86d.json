@@ -15,7 +15,9 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1,
+						2
 					]
 				}
 			],
@@ -30,7 +32,9 @@
 					"name" : "ch7_cuda",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1,
+						2
 					]
 				}
 			],
@@ -41,6 +45,20 @@
 					"id" : "example1_ch7::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-example1_ch7-Debug-bb67068280dbbb501d2a.json",
 					"name" : "example1_ch7",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "example2_ch7::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-example2_ch7-Debug-1f8dd2f81961a071a4b7.json",
+					"name" : "example2_ch7",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "example3_ch7::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-example3_ch7-Debug-a20afdb8f698b05a3311.json",
+					"name" : "example3_ch7",
 					"projectIndex" : 0
 				}
 			]

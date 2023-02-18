@@ -13,6 +13,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.26.0-rc1/CMakeSystem.cmake"
   "CMakeFiles/example1_ch7.dir/example1_ch7_generated_heat_ch7.cu.o.cmake.pre-gen"
   "CMakeFiles/example1_ch7.dir/example1_ch7_generated_heat_ch7.cu.o.depend"
+  "CMakeFiles/example2_ch7.dir/example2_ch7_generated_heat_ch7_2.cu.o.cmake.pre-gen"
+  "CMakeFiles/example2_ch7.dir/example2_ch7_generated_heat_ch7_2.cu.o.depend"
+  "CMakeFiles/example3_ch7.dir/example3_ch7_generated_heat_ch7_3.cu.o.cmake.pre-gen"
+  "CMakeFiles/example3_ch7.dir/example3_ch7_generated_heat_ch7_3.cu.o.depend"
   "/usr/local/share/cmake-3.26/Modules/CMakeCInformation.cmake"
   "/usr/local/share/cmake-3.26/Modules/CMakeCXXInformation.cmake"
   "/usr/local/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake"
@@ -55,11 +59,17 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/example1_ch7.dir/example1_ch7_generated_heat_ch7.cu.o.cmake.pre-gen"
+  "CMakeFiles/example2_ch7.dir/example2_ch7_generated_heat_ch7_2.cu.o.cmake.pre-gen"
+  "CMakeFiles/example3_ch7.dir/example3_ch7_generated_heat_ch7_3.cu.o.cmake.pre-gen"
   "CMakeFiles/example1_ch7.dir/example1_ch7_generated_heat_ch7.cu.o.Debug.cmake"
+  "CMakeFiles/example2_ch7.dir/example2_ch7_generated_heat_ch7_2.cu.o.Debug.cmake"
+  "CMakeFiles/example3_ch7.dir/example3_ch7_generated_heat_ch7_3.cu.o.Debug.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/example1_ch7.dir/DependInfo.cmake"
+  "CMakeFiles/example2_ch7.dir/DependInfo.cmake"
+  "CMakeFiles/example3_ch7.dir/DependInfo.cmake"
   )

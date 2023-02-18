@@ -1,4 +1,4 @@
-#include<heat_ch7_2.h>
+#include<heat_ch7_3.h>
 
 struct DataBlock
 {
@@ -12,6 +12,10 @@ struct DataBlock
     float totalTime;
     float frames;
 };
+
+texture<float, 2> texConstSrc;
+texture<float, 2> texIn;
+texture<float, 2> texOut;
 
 float * dev_temp; // 用于swap函数
 
@@ -27,34 +31,41 @@ void swap(float* dev_a, float * dev_b, long size)
     //cudaFree(dev_temp);
 }
 
-__global__ void copy_const_kernel(float *input_ptr, const float *const_refer_ptr)
+__global__ void copy_const_kernel(float *input_ptr)
 {
     int x = threadIdx.x + blockIdx.x * blockDim.x;
     int y = threadIdx.y + blockIdx.y * blockDim.y;
     int offset = x + y * blockDim.x * gridDim.x;
 
-    if(const_refer_ptr[offset] != 0) input_ptr[offset] = const_refer_ptr[offset];
+    float c = tex2D(texConstSrc,x,y);
+    if(c != 0) input_ptr[offset] = c;
 }
 
-__global__ void blend_kernel(float *current_srceen, const float *last_screen)
+__global__ void blend_kernel(float *dst, bool dstOut)
 {
     int x = threadIdx.x + blockIdx.x * blockDim.x;
     int y = threadIdx.y + blockIdx.y * blockDim.y;
     int offset = x + y * blockDim.x * gridDim.x;
 
-    int left = offset - 1;
-    int right = offset + 1;
-    if(x == 0) left++;
-    if(x == DIM - 1) right--;
-
-    int top = offset - DIM;
-    int bottom = offset + DIM;
-    if(y == 0) top += DIM;
-    if(y == DIM - 1) top -= DIM;
-
-    current_srceen[offset] = last_screen[offset] + SPEED * (last_screen[top] + 
-    last_screen[bottom] + last_screen[left] + last_screen[right] -
-    last_screen[offset] * 4);
+    float top_heat, left_heat, center_heat, right_heat, bottom_heat;
+    if(dstOut)
+    {
+        top_heat = tex2D(texIn,x,y-1);
+        left_heat = tex2D(texIn,x-1,y);
+        center_heat = tex2D(texIn,x,y);
+        right_heat = tex2D(texIn,x+1,y);
+        bottom_heat = tex2D(texIn,x,y+1);
+    }
+    else
+    {
+        top_heat = tex2D(texOut,x,y-1);
+        left_heat = tex2D(texOut,x-1,y);
+        center_heat = tex2D(texOut,x,y);
+        right_heat = tex2D(texOut,x+1,y);
+        bottom_heat = tex2D(texOut,x,y+1);
+    }
+    dst[offset] = center_heat + SPEED * (top_heat + bottom_heat + 
+    right_heat + left_heat - 4 * center_heat);
 }
 
 //好像书上没有这个函数的定义 我根据网上资料写了一个
@@ -108,14 +119,26 @@ void anim_gpu(DataBlock *d)
     dim3 threads(16,16);
     CPUAnimBitmap *bitmap = d->bitmap;
     float elapsedTime;
+    volatile bool dstOut = true;
 
     cudaEventRecord(d->start, 0);
     for (int i = 0; i < UPDATA_RATE_PER_STEP; i++)
     {
-        copy_const_kernel<<<blocks, threads>>>(d->dev_inSrc, d->dev_constSrc);
-        blend_kernel<<<blocks, threads>>>(d->dev_outSrc, d->dev_inSrc);
+        float *in, *out;
+        if(dstOut)
+        {
+            in = d->dev_inSrc;
+            out = d->dev_outSrc;
+        }
+        else
+        {
+            in = d->dev_outSrc;
+            out = d->dev_inSrc;
+        }
+        copy_const_kernel<<<blocks, threads>>>(in);
+        blend_kernel<<<blocks, threads>>>(out, dstOut);
+        dstOut = !dstOut;
 
-        swap(d->dev_inSrc, d->dev_outSrc, d->bitmap->image_size());
     }
     float_to_color<<<blocks, threads>>>(d->output_bitmap, d->dev_inSrc);
     cudaEventRecord(d->stop, 0);
@@ -131,6 +154,10 @@ void anim_gpu(DataBlock *d)
 
 void anim_exit(DataBlock *d)
 {
+    cudaUnbindTexture(texIn);
+    cudaUnbindTexture(texOut);
+    cudaUnbindTexture(texConstSrc);
+
     cudaFree(d->dev_constSrc);
     cudaFree(d->dev_inSrc);
     cudaFree(d->dev_outSrc);
@@ -155,6 +182,11 @@ extern "C" void HeatKernel()
     cudaMalloc((void**)&data.dev_inSrc, bitmap.image_size());
     cudaMalloc((void**)&data.dev_outSrc, bitmap.image_size());
     cudaMalloc((void **)&dev_temp, bitmap.image_size()); // 用于swap函数交换
+
+    cudaChannelFormatDesc desc = cudaCreateChannelDesc<float>();
+    cudaBindTexture2D(NULL, texConstSrc, data.dev_constSrc, desc, DIM, DIM, sizeof(float) * DIM);
+    cudaBindTexture2D(NULL, texIn, data.dev_inSrc, desc, DIM, DIM, sizeof(float) * DIM);
+    cudaBindTexture2D(NULL, texOut, data.dev_outSrc, desc, DIM, DIM, sizeof(float) * DIM);
 
     float *temp = (float*)malloc(bitmap.image_size());
     for(int i = 0; i < DIM*DIM; i++)

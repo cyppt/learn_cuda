@@ -1,3 +1,5 @@
 /home/cyppt/cuda/ch7/build/CMakeFiles/example1_ch7.dir
+/home/cyppt/cuda/ch7/build/CMakeFiles/example2_ch7.dir
+/home/cyppt/cuda/ch7/build/CMakeFiles/example3_ch7.dir
 /home/cyppt/cuda/ch7/build/CMakeFiles/edit_cache.dir
 /home/cyppt/cuda/ch7/build/CMakeFiles/rebuild_cache.dir

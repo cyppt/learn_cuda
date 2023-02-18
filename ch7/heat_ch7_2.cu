@@ -1,4 +1,4 @@
-#include<heat_ch7_2.h>
+#include<heat_ch7.h>
 
 struct DataBlock
 {
@@ -12,6 +12,10 @@ struct DataBlock
     float totalTime;
     float frames;
 };
+
+texture<float> texConstSrc;
+texture<float> texIn;
+texture<float> texOut;
 
 float * dev_temp; // 用于swap函数
 
@@ -27,16 +31,17 @@ void swap(float* dev_a, float * dev_b, long size)
     //cudaFree(dev_temp);
 }
 
-__global__ void copy_const_kernel(float *input_ptr, const float *const_refer_ptr)
+__global__ void copy_const_kernel(float *input_ptr)
 {
     int x = threadIdx.x + blockIdx.x * blockDim.x;
     int y = threadIdx.y + blockIdx.y * blockDim.y;
     int offset = x + y * blockDim.x * gridDim.x;
 
-    if(const_refer_ptr[offset] != 0) input_ptr[offset] = const_refer_ptr[offset];
+    float c = tex1Dfetch(texConstSrc,offset);
+    if(c != 0) input_ptr[offset] = c;
 }
 
-__global__ void blend_kernel(float *current_srceen, const float *last_screen)
+__global__ void blend_kernel(float *dst, bool dstOut)
 {
     int x = threadIdx.x + blockIdx.x * blockDim.x;
     int y = threadIdx.y + blockIdx.y * blockDim.y;
@@ -52,9 +57,25 @@ __global__ void blend_kernel(float *current_srceen, const float *last_screen)
     if(y == 0) top += DIM;
     if(y == DIM - 1) top -= DIM;
 
-    current_srceen[offset] = last_screen[offset] + SPEED * (last_screen[top] + 
-    last_screen[bottom] + last_screen[left] + last_screen[right] -
-    last_screen[offset] * 4);
+    float top_heat, left_heat, center_heat, right_heat, bottom_heat;
+    if(dstOut)
+    {
+        top_heat = tex1Dfetch(texIn,top);
+        left_heat = tex1Dfetch(texIn,left);
+        center_heat = tex1Dfetch(texIn,offset);
+        right_heat = tex1Dfetch(texIn,right);
+        bottom_heat = tex1Dfetch(texIn,bottom);
+    }
+    else
+    {
+        top_heat = tex1Dfetch(texOut,top);
+        left_heat = tex1Dfetch(texOut,left);
+        center_heat = tex1Dfetch(texOut,offset);
+        right_heat = tex1Dfetch(texOut,right);
+        bottom_heat = tex1Dfetch(texOut,bottom);
+    }
+    dst[offset] = center_heat + SPEED * (top_heat + bottom_heat + 
+    right_heat + left_heat - 4 * center_heat);
 }
 
 //好像书上没有这个函数的定义 我根据网上资料写了一个
@@ -108,14 +129,26 @@ void anim_gpu(DataBlock *d)
     dim3 threads(16,16);
     CPUAnimBitmap *bitmap = d->bitmap;
     float elapsedTime;
+    volatile bool dstOut = true;
 
     cudaEventRecord(d->start, 0);
     for (int i = 0; i < UPDATA_RATE_PER_STEP; i++)
     {
-        copy_const_kernel<<<blocks, threads>>>(d->dev_inSrc, d->dev_constSrc);
-        blend_kernel<<<blocks, threads>>>(d->dev_outSrc, d->dev_inSrc);
+        float *in, *out;
+        if(dstOut)
+        {
+            in = d->dev_inSrc;
+            out = d->dev_outSrc;
+        }
+        else
+        {
+            in = d->dev_outSrc;
+            out = d->dev_inSrc;
+        }
+        copy_const_kernel<<<blocks, threads>>>(in);
+        blend_kernel<<<blocks, threads>>>(out, dstOut);
+        dstOut = !dstOut;
 
-        swap(d->dev_inSrc, d->dev_outSrc, d->bitmap->image_size());
     }
     float_to_color<<<blocks, threads>>>(d->output_bitmap, d->dev_inSrc);
     cudaEventRecord(d->stop, 0);
@@ -131,6 +164,10 @@ void anim_gpu(DataBlock *d)
 
 void anim_exit(DataBlock *d)
 {
+    cudaUnbindTexture(texIn);
+    cudaUnbindTexture(texOut);
+    cudaUnbindTexture(texConstSrc);
+
     cudaFree(d->dev_constSrc);
     cudaFree(d->dev_inSrc);
     cudaFree(d->dev_outSrc);
@@ -155,6 +192,10 @@ extern "C" void HeatKernel()
     cudaMalloc((void**)&data.dev_inSrc, bitmap.image_size());
     cudaMalloc((void**)&data.dev_outSrc, bitmap.image_size());
     cudaMalloc((void **)&dev_temp, bitmap.image_size()); // 用于swap函数交换
+
+    cudaBindTexture(NULL, texConstSrc, data.dev_constSrc, bitmap.image_size());
+    cudaBindTexture(NULL, texIn, data.dev_inSrc, bitmap.image_size());
+    cudaBindTexture(NULL, texOut, data.dev_outSrc, bitmap.image_size());
 
     float *temp = (float*)malloc(bitmap.image_size());
     for(int i = 0; i < DIM*DIM; i++)

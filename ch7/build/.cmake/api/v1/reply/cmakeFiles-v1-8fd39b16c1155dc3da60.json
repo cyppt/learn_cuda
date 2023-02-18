@@ -237,7 +237,33 @@
 		},
 		{
 			"isGenerated" : true,
+			"path" : "build/CMakeFiles/example2_ch7.dir/example2_ch7_generated_heat_ch7_2.cu.o.depend"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/local/share/cmake-3.26/Modules/FindCUDA/run_nvcc.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/example3_ch7.dir/example3_ch7_generated_heat_ch7_3.cu.o.depend"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/local/share/cmake-3.26/Modules/FindCUDA/run_nvcc.cmake"
+		},
+		{
+			"isGenerated" : true,
 			"path" : "build/CMakeFiles/example1_ch7.dir/example1_ch7_generated_heat_ch7.cu.o.cmake.pre-gen"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/example2_ch7.dir/example2_ch7_generated_heat_ch7_2.cu.o.cmake.pre-gen"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/example3_ch7.dir/example3_ch7_generated_heat_ch7_3.cu.o.cmake.pre-gen"
 		}
 	],
 	"kind" : "cmakeFiles",

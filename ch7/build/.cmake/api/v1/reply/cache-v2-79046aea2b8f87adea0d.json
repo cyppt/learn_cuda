@@ -1191,7 +1191,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/cyppt/cuda/ch7/build/CMakeFiles/example1_ch7.dir//example1_ch7_generated_heat_ch7.cu.o.depend"
+			"value" : "/home/cyppt/cuda/ch7/build/CMakeFiles/example1_ch7.dir//example1_ch7_generated_heat_ch7.cu.o.depend;/home/cyppt/cuda/ch7/build/CMakeFiles/example2_ch7.dir//example2_ch7_generated_heat_ch7_2.cu.o.depend;/home/cyppt/cuda/ch7/build/CMakeFiles/example3_ch7.dir//example3_ch7_generated_heat_ch7_3.cu.o.depend"
 		},
 		{
 			"name" : "CUDA_ATTACH_VS_BUILD_RULE_TO_CUDA_FILE",

@@ -74,7 +74,7 @@ CMakeFiles/example1_ch7.dir/example1_ch7_generated_heat_ch7.cu.o: /home/cyppt/cu
 CMakeFiles/example1_ch7.dir/example1_ch7_generated_heat_ch7.cu.o: /home/cyppt/cuda/ch7/include/cpu_anim.h
 CMakeFiles/example1_ch7.dir/example1_ch7_generated_heat_ch7.cu.o: /home/cyppt/cuda/ch7/include/cpu_bitmap.h
 CMakeFiles/example1_ch7.dir/example1_ch7_generated_heat_ch7.cu.o: /home/cyppt/cuda/ch7/include/gl_helper.h
-CMakeFiles/example1_ch7.dir/example1_ch7_generated_heat_ch7.cu.o: /home/cyppt/cuda/ch7/include/heat_ch7.h
+CMakeFiles/example1_ch7.dir/example1_ch7_generated_heat_ch7.cu.o: /home/cyppt/cuda/ch7/include/heat_ch7_2.h
 CMakeFiles/example1_ch7.dir/example1_ch7_generated_heat_ch7.cu.o: /usr/include/GL/freeglut_std.h
 CMakeFiles/example1_ch7.dir/example1_ch7_generated_heat_ch7.cu.o: /usr/include/GL/gl.h
 CMakeFiles/example1_ch7.dir/example1_ch7_generated_heat_ch7.cu.o: /usr/include/GL/glext.h
