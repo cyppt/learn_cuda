@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/cyppt/cuda/ch8/build",
+  "command": "/usr/bin/g++-8  -I/home/cyppt/cuda/ch8/include -I/usr/local/cuda-11.0/include -g -o CMakeFiles/example1_ch8.dir/example1_ch8.cpp.o -c /home/cyppt/cuda/ch8/example1_ch8.cpp",
+  "file": "/home/cyppt/cuda/ch8/example1_ch8.cpp",
+  "output": "CMakeFiles/example1_ch8.dir/example1_ch8.cpp.o"
+}
+]

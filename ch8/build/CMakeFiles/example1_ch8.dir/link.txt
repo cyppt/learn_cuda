@@ -1,0 +1,1 @@
+/usr/bin/g++-8 -g -rdynamic CMakeFiles/example1_ch8.dir/example1_ch8.cpp.o CMakeFiles/example1_ch8.dir/example1_ch8_generated_gl_cuda.cu.o -o example1_ch8  /usr/local/cuda-11.0/lib64/libcudart_static.a -ldl -lrt -lGL -lGLU -lglut -lXmu -lXi -lpthread 

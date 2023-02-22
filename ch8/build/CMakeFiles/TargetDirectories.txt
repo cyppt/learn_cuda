@@ -1,0 +1,3 @@
+/home/cyppt/cuda/ch8/build/CMakeFiles/example1_ch8.dir
+/home/cyppt/cuda/ch8/build/CMakeFiles/edit_cache.dir
+/home/cyppt/cuda/ch8/build/CMakeFiles/rebuild_cache.dir
