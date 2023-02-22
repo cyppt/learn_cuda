@@ -71,7 +71,7 @@ include CMakeFiles/example1_ch8.dir/flags.make
 
 CMakeFiles/example1_ch8.dir/example1_ch8_generated_gl_cuda.cu.o: /home/cyppt/cuda/ch8/gl_cuda.cu
 CMakeFiles/example1_ch8.dir/example1_ch8_generated_gl_cuda.cu.o: /home/cyppt/cuda/ch8/gl_cuda.cu
-CMakeFiles/example1_ch8.dir/example1_ch8_generated_gl_cuda.cu.o: /home/cyppt/cuda/ch8/include/cpu_anim.h
+CMakeFiles/example1_ch8.dir/example1_ch8_generated_gl_cuda.cu.o: /home/cyppt/cuda/ch8/include/book.h
 CMakeFiles/example1_ch8.dir/example1_ch8_generated_gl_cuda.cu.o: /home/cyppt/cuda/ch8/include/cpu_bitmap.h
 CMakeFiles/example1_ch8.dir/example1_ch8_generated_gl_cuda.cu.o: /home/cyppt/cuda/ch8/include/gl_cuda.h
 CMakeFiles/example1_ch8.dir/example1_ch8_generated_gl_cuda.cu.o: /home/cyppt/cuda/ch8/include/gl_helper.h

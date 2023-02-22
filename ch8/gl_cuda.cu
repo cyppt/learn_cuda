@@ -35,7 +35,7 @@ static void key_func(unsigned char key, int x, int y)
     }
 }
 
-static void draw_func(void)
+static void draw_func()
 {   
     // Draw the pixels in the RGB buffer with the given dimensions (DIM) and a format of unsigned bytes
     glDrawPixels(DIM, DIM, GL_RGBA, GL_UNSIGNED_BYTE, 0);
@@ -55,9 +55,9 @@ extern "C" void GlCudaKernel(int *argc, char **argv)
     prop.major = 1;
     prop.minor = 0;
     // Choose the device with the given properties
-    cudaChooseDevice(&dev,&prop);
+    HANDLE_ERROR(cudaChooseDevice(&dev,&prop));
     // Set GL device with the chosen device number
-    cudaGLSetGLDevice(dev);
+    HANDLE_ERROR(cudaGLSetGLDevice(dev));
 
     /* Initialize the GLUT library */
     glutInit(argc, argv);
@@ -75,21 +75,24 @@ extern "C" void GlCudaKernel(int *argc, char **argv)
     glBufferData(GL_PIXEL_UNPACK_BUFFER_ARB, DIM * DIM * 4, NULL, GL_DYNAMIC_DRAW_ARB);
     
     // Register buffer object with cuda
-    cudaGraphicsGLRegisterBuffer(&resource, bufferObj, cudaGraphicsMapFlagsNone);
+
+    /*  !!!!报错!!!：all CUDA-capable devices are busy or unavailable */
+    /* 不太懂如何解决*/
+    HANDLE_ERROR(cudaGraphicsGLRegisterBuffer(&resource, bufferObj, cudaGraphicsMapFlagsNone));
 
     uchar4* devPtr;
     size_t size;
     // Register buffer object with CUDA and map it to resource
-    cudaGraphicsMapResources(1, &resource, NULL);   
+    HANDLE_ERROR(cudaGraphicsMapResources(1, &resource, NULL));   
     // Get the pointer to the mapped resource so we can access it in a CUDA kernel
-    cudaGraphicsResourceGetMappedPointer((void**)&devPtr, &size, resource);
+    HANDLE_ERROR(cudaGraphicsResourceGetMappedPointer((void**)&devPtr, &size, resource));
 
     dim3 grids(DIM/16, DIM/16);
     dim3 threads(16,16);
     kernel<<<grids, threads>>>(devPtr);
 
     // unmap the CUDA resource from the buffer object
-    cudaGraphicsUnmapResources(1, &resource, NULL);
+    HANDLE_ERROR(cudaGraphicsUnmapResources(1, &resource, NULL));
 
     /* Register keyboard callback for the specified key press */
     glutKeyboardFunc(key_func);
