@@ -77,7 +77,13 @@ extern "C" void GlCudaKernel(int *argc, char **argv)
     // Register buffer object with cuda
 
     /*  !!!!报错!!!：all CUDA-capable devices are busy or unavailable */
-    /* 不太懂如何解决*/
+    /*
+    查资料发现：  
+    在WSL2上是无法使用OpenGL-CUDA的，详见官网：
+    https://docs.nvidia.com/cuda/wsl-user-guide/index.html#features-not-yet-supported
+    的4.2. Features Not Yet Supported
+    OpenGL-CUDA Interop is not yet supported. Applications relying on OpenGL will not work.
+    */
     HANDLE_ERROR(cudaGraphicsGLRegisterBuffer(&resource, bufferObj, cudaGraphicsMapFlagsNone));
 
     uchar4* devPtr;
