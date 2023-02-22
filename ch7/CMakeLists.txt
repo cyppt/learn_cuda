@@ -8,7 +8,7 @@ find_package(GLUT REQUIRED)
 
 #该作用是指定cmake使用的OpenGL 版本。(当安装了nvidia驱动的opengl时候)
 if (POLICY CMP0072)
-  set(OpenGL_GL_PREFERENCE LEGACY)
+  set(OpenGL_GL_PREFERENCE GLVND)
 endif()
 
 include_directories(${OPENGL_INCLUDE_DIR})
